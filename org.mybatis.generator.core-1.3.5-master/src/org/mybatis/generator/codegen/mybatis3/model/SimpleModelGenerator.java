@@ -98,7 +98,7 @@ public class SimpleModelGenerator extends AbstractJavaGenerator {
             if (plugins.modelGetterMethodGenerated(method, topLevelClass,
                     introspectedColumn, introspectedTable,
                     Plugin.ModelClassType.BASE_RECORD)) {
-                topLevelClass.addMethod(method);
+                //topLevelClass.addMethod(method);
             }
 
             if (!introspectedTable.isImmutable()) {
@@ -106,7 +106,7 @@ public class SimpleModelGenerator extends AbstractJavaGenerator {
                 if (plugins.modelSetterMethodGenerated(method, topLevelClass,
                         introspectedColumn, introspectedTable,
                         Plugin.ModelClassType.BASE_RECORD)) {
-                    topLevelClass.addMethod(method);
+                    //topLevelClass.addMethod(method);
                 }
             }
         }

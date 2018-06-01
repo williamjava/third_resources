@@ -21,6 +21,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 
+import org.apache.tools.ant.util.StringUtils;
 import org.mybatis.generator.api.CommentGenerator;
 import org.mybatis.generator.api.IntrospectedColumn;
 import org.mybatis.generator.api.IntrospectedTable;
@@ -254,8 +255,10 @@ public class DefaultCommentGenerator implements CommentGenerator {
 		topLevelClass.addJavaDocLine("import org.springframework.format.annotation.DateTimeFormat;");
 		// topLevelClass.addJavaDocLine("import
 		// com.fasterxml.jackson.annotation.JsonFormat;");
-		topLevelClass.addJavaDocLine("import io.swagger.annotations.ApiModel;");
+		// topLevelClass.addJavaDocLine("import
+		// io.swagger.annotations.ApiModel;");
 		topLevelClass.addJavaDocLine("import io.swagger.annotations.ApiModelProperty;");
+		topLevelClass.addJavaDocLine("import lombok.Data;");
 
 		// 添加类注释
 		topLevelClass.addJavaDocLine("/**");
@@ -269,7 +272,8 @@ public class DefaultCommentGenerator implements CommentGenerator {
 		// 添加时间
 		topLevelClass.addJavaDocLine(" * @date " + getDateString());
 		topLevelClass.addJavaDocLine(" */");
-		topLevelClass.addJavaDocLine("@ApiModel(value =\"" + entityName + "\")");
+		// topLevelClass.addJavaDocLine("@ApiModel(value =\"" + entityName +
+		// "\")");
 
 		/*
 		 * topLevelClass.addJavaDocLine("/**"); if (addRemarkComments &&
