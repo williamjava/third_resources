@@ -252,7 +252,8 @@ public class DefaultCommentGenerator implements CommentGenerator {
 
 		// 添加导入类的信息
 		topLevelClass.addJavaDocLine("import org.springframework.format.annotation.DateTimeFormat;");
-		topLevelClass.addJavaDocLine("import com.fasterxml.jackson.annotation.JsonFormat;");
+		// topLevelClass.addJavaDocLine("import
+		// com.fasterxml.jackson.annotation.JsonFormat;");
 		topLevelClass.addJavaDocLine("import io.swagger.annotations.ApiModel;");
 		topLevelClass.addJavaDocLine("import io.swagger.annotations.ApiModelProperty;");
 
